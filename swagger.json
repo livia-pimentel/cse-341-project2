@@ -1,0 +1,481 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Cinema API",
+    "description": "API for managing employees and movies in a cinema.",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/employees/": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "description": "Get all employees",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Employees"
+        ],
+        "description": "Create a new employee",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string",
+                  "example": "John",
+                  "description": "First name of the employee"
+                },
+                "lastName": {
+                  "type": "string",
+                  "example": "Doe",
+                  "description": "Last name of the employee"
+                },
+                "dateBirth": {
+                  "type": "string",
+                  "example": "1990-01-01",
+                  "format": "date",
+                  "description": "Date of birth"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "john.doe@example.com",
+                  "format": "email",
+                  "description": "Email address"
+                },
+                "hireDate": {
+                  "type": "string",
+                  "example": "2024-06-18",
+                  "format": "date",
+                  "description": "Date of hire"
+                },
+                "workHours": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": "string",
+                      "example": "08:00 a.m",
+                      "description": "Start time of work"
+                    },
+                    "end": {
+                      "type": "string",
+                      "example": "07:00 p.m",
+                      "description": "End time of work"
+                    }
+                  },
+                  "example": {
+                    "start": "08:00 a.m",
+                    "end": "07:00 p.m"
+                  },
+                  "description": "Work hours"
+                },
+                "role": {
+                  "type": "string",
+                  "example": "Manager",
+                  "description": "Role of the employee"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/employees/{id}": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "description": "Get an employee by ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Employees"
+        ],
+        "description": "Update an employee by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "type": "string",
+                  "example": "John",
+                  "description": "First name of the employee"
+                },
+                "lastName": {
+                  "type": "string",
+                  "example": "Doe",
+                  "description": "Last name of the employee"
+                },
+                "dateBirth": {
+                  "type": "string",
+                  "example": "1990-01-01",
+                  "format": "date",
+                  "description": "Date of birth"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "john.doe@example.com",
+                  "format": "email",
+                  "description": "Email address"
+                },
+                "hireDate": {
+                  "type": "string",
+                  "example": "2024-06-18",
+                  "format": "date",
+                  "description": "Date of hire"
+                },
+                "workHours": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": "string",
+                      "example": "08:00 a.m",
+                      "description": "Start time of work"
+                    },
+                    "end": {
+                      "type": "string",
+                      "example": "07:00 p.m",
+                      "description": "End time of work"
+                    }
+                  },
+                  "example": {
+                    "start": "08:00 a.m",
+                    "end": "07:00 p.m"
+                  },
+                  "description": "Work hours"
+                },
+                "role": {
+                  "type": "string",
+                  "example": "Manager",
+                  "description": "Role of the employee"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Employees"
+        ],
+        "description": "Delete an employee by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/movies/": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "description": "Get all movies",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Movies"
+        ],
+        "description": "Create a new movie",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "example": "Inception",
+                  "description": "Title of the movie"
+                },
+                "genre": {
+                  "type": "string",
+                  "example": "Sci-Fi",
+                  "description": "Genre of the movie"
+                },
+                "duration": {
+                  "type": "string",
+                  "example": "180m",
+                  "description": "Duration of the movie"
+                },
+                "rating": {
+                  "type": "string",
+                  "example": "8.8",
+                  "description": "Rating of the movie"
+                },
+                "showtimes": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string",
+                      "example": "2024-06-18",
+                      "description": "Date of the showtime"
+                    },
+                    "time": {
+                      "type": "string",
+                      "example": "09:00 p.m",
+                      "description": "Time of the showtime"
+                    },
+                    "room": {
+                      "type": "integer",
+                      "example": 1,
+                      "description": "Room number"
+                    }
+                  },
+                  "example": {
+                    "date": "2024-06-18",
+                    "time": "09:00 p.m",
+                    "room": 1
+                  },
+                  "description": "Showtimes information"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/movies/{id}": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "description": "Get a movie by ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Movies"
+        ],
+        "description": "Update a movie by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "example": "Inception",
+                  "description": "Title of the movie"
+                },
+                "genre": {
+                  "type": "string",
+                  "example": "Sci-Fi",
+                  "description": "Genre of the movie"
+                },
+                "duration": {
+                  "type": "string",
+                  "example": "180m",
+                  "description": "Duration of the movie"
+                },
+                "rating": {
+                  "type": "string",
+                  "example": "8.8",
+                  "description": "Rating of the movie"
+                },
+                "showtimes": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string",
+                      "example": "2024-06-18",
+                      "description": "Date of the showtime"
+                    },
+                    "time": {
+                      "type": "string",
+                      "example": "09:00 p.m",
+                      "description": "Time of the showtime"
+                    },
+                    "room": {
+                      "type": "integer",
+                      "example": 1,
+                      "description": "Room number"
+                    }
+                  },
+                  "example": {
+                    "date": "2024-06-18",
+                    "time": "09:00 p.m",
+                    "room": 1
+                  },
+                  "description": "Showtimes information"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Movies"
+        ],
+        "description": "Delete a movie by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
