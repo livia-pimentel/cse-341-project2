@@ -1,0 +1,118 @@
+
+//**********************GET ALL************************
+ 
+//employees
+
+### Render
+
+GET https://cse-341-project2-ymsc.onrender.com/employees
+
+### Local Host
+
+GET http://localhost:3000/employees
+ 
+//**********************GET ONE************************
+
+//EMPLOYEES
+
+### Render
+
+GET https://cse-341-project2-ymsc.onrender.com/employees/6671cd5b41e2e05287341e3f
+
+### Local Host
+
+GET http://localhost:3000/employees/6671cd5b41e2e05287341e3f
+ 
+//*******************POST***************************
+
+//EMPLOYEES
+
+### Render
+
+POST https://cse-341-project2-ymsc.onrender.com/employees
+Content-Type: application/json
+ 
+{
+  "firstName": "Ralf",
+  "lastName": "Doe",
+  "dateBirth": "1980-12-01",
+  "email": "Ralf.doe@example.com",
+  "hireDate": "2024-06-18",
+  "workHours": {
+    "start": "08:00 a.m",
+    "end": "07:00 p.m"
+  },
+  "role": "Manager"
+}
+ 
+### Local Host
+
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+{
+  "firstName": "Ralf",
+  "lastName": "Doe",
+  "dateBirth": "1980-12-01",
+  "email": "Ralf.doe@example.com",
+  "hireDate": "2023-06-18",
+  "workHours": {
+    "start": "08:00 a.m",
+    "end": "07:00 p.m"
+  },
+  "role": "Manager"
+}
+ 
+//******************UPDATE/PUT****************************
+
+//EMPLOYEES
+
+### Render
+
+PUT https://cse-341-project1-ymsc.onrender.com/employees/6671cee89434c5e61f052092
+Content-Type: application/json
+ 
+{
+  "_id": "6671cee89434c5e61f052092",  
+  "firstName": "John",
+  "lastName": "Doe",
+  "dateBirth": "1990-01-01",
+  "email": "john.doe@example.com",
+  "hireDate": "2024-06-18",
+  "workHours": {
+    "start": "08:00 a.m",
+    "end": "07:00 p.m"
+  },
+  "role": "Manager"
+}
+ 
+### Local Host
+
+PUT http://localhost:3000/employees/6671cee89434c5e61f052092
+Content-Type: application/json
+ 
+{
+  "_id": "6671cee89434c5e61f052092",  
+  "firstName": "John",
+  "lastName": "Doe",
+  "dateBirth": "1990-01-01",
+  "email": "john.doe@example.com",
+  "hireDate": "2024-06-18",
+  "workHours": {
+    "start": "08:00 a.m",
+    "end": "07:00 p.m"
+  },
+  "role": "Manager"
+}
+ 
+//******************DELETE****************************
+
+//EMPLOYEES
+
+### Render
+
+DELETE https://cse-341-project1-ymsc.onrender.com/employees/6671cea39434c5e61f052091
+ 
+### Local Host
+
+DELETE http://localhost:3000/employees/6671cea39434c5e61f052091

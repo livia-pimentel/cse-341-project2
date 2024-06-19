@@ -1,0 +1,114 @@
+
+//**********************GET ALL************************
+ 
+//movies
+
+### Render
+
+GET https://cse-341-project2-ymsc.onrender.com/movies
+
+### Local Host
+
+GET http://localhost:3000/movies
+ 
+//**********************GET ONE************************
+
+//MOVIES
+
+### Render
+
+GET https://cse-341-project2-ymsc.onrender.com/movies/6671cd5b41e2e05287341e3f
+
+### Local Host
+
+GET http://localhost:3000/movies/6671cd5b41e2e05287341e3f
+ 
+//*******************POST***************************
+
+//MOVIES
+
+### Render
+
+POST https://cse-341-project2-ymsc.onrender.com/movies
+Content-Type: application/json
+ 
+{
+  "title": "Inception",
+  "genre": "Sci-Fi",
+  "duration": "180m",
+  "rating": "8.8",
+  "showtimes": {
+    "date": "2024-06-18",
+    "time": "09:00 p.m",
+    "room": 1
+  }
+}
+ 
+### Local Host
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Inception",
+  "genre": "Sci-Fi",
+  "duration": "180m",
+  "rating": "8.8",
+  "showtimes": {
+    "date": "2024-06-18",
+    "time": "09:00 p.m",
+    "room": 1
+  }
+}
+ 
+//******************UPDATE/PUT****************************
+
+//MOVIES
+
+### Render
+
+PUT https://cse-341-project1-ymsc.onrender.com/movies/6671d1c52d0d22f187dbf2b1
+Content-Type: application/json
+ 
+{
+  "_id": "6671d1c52d0d22f187dbf2b1",
+  "title": "Inception",
+  "genre": "Sci-Fi",
+  "duration": "180m",
+  "rating": "8.8",
+  "showtimes": {
+    "date": "2024-06-18",
+    "time": "09:00 p.m",
+    "room": 1
+  }
+}
+ 
+### Local Host
+
+PUT http://localhost:3000/movies/6671d1c52d0d22f187dbf2b1
+Content-Type: application/json
+ 
+{
+  "_id": "6671d1c52d0d22f187dbf2b1",
+  "title": "Inception",
+  "genre": "Sci-Fi",
+  "duration": "180m",
+  "rating": "8.8",
+  "showtimes": {
+    "date": "2024-06-18",
+    "time": "09:00 p.m",
+    "room": 1
+  }
+}
+ 
+//******************DELETE****************************
+
+//MOVIES
+
+### Render
+
+DELETE https://cse-341-project1-ymsc.onrender.com/movies/6671d136ffb39eb2f62881c5
+ 
+### Local Host
+
+DELETE http://localhost:3000/movies/6671d136ffb39eb2f62881c5
