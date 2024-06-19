@@ -5,7 +5,7 @@
 
 ### Render
 
-GET https://cse-341-project2-ymsc.onrender.com/employees
+GET https://cse-341-project2-ux8v.onrender.com/employees
 
 ### Local Host
 
@@ -17,7 +17,7 @@ GET http://localhost:3000/employees
 
 ### Render
 
-GET https://cse-341-project2-ymsc.onrender.com/employees/6671cd5b41e2e05287341e3f
+GET https://cse-341-project2-ux8v.onrender.com/employees/6671cd5b41e2e05287341e3f
 
 ### Local Host
 
@@ -29,7 +29,7 @@ GET http://localhost:3000/employees/6671cd5b41e2e05287341e3f
 
 ### Render
 
-POST https://cse-341-project2-ymsc.onrender.com/employees
+POST https://cse-341-project2-ux8v.onrender.com/employees
 Content-Type: application/json
  
 {
