@@ -299,8 +299,9 @@
                   "description": "Duration of the movie"
                 },
                 "rating": {
-                  "type": "string",
-                  "example": "8.8",
+                  "type": "number",
+                  "format": "float",
+                  "example": 8.8,
                   "description": "Rating of the movie"
                 },
                 "showtimes": {
@@ -406,8 +407,9 @@
                   "description": "Duration of the movie"
                 },
                 "rating": {
-                  "type": "string",
-                  "example": "8.8",
+                  "type": "number",
+                  "format": "float",
+                  "example": 8.8,
                   "description": "Rating of the movie"
                 },
                 "showtimes": {
