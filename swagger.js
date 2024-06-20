@@ -5,7 +5,7 @@ const doc = {
         title: 'Cinema API',
         description: 'Cinema API'
     },
-    host:'localhost:3000',
+    host:'cse-341-project2-ux8v.onrender.com',
     schemes: ['http']
 }
 
