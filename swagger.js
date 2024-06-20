@@ -6,7 +6,7 @@ const doc = {
         description: 'Cinema API'
     },
     host:'cse-341-project2-ux8v.onrender.com',
-    schemes: ['http']
+    schemes: ['https, http']
 }
 
 const outputFile = './swagger.json'
