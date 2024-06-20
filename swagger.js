@@ -5,7 +5,7 @@ const doc = {
         title: 'Cinema API',
         description: 'Cinema API'
     },
-    host:'cse-341-project2-ux8v.onrender.com',
+    host:'localhost:3000',
     schemes: ['http']
 }
 
@@ -14,4 +14,3 @@ const endpointFiles = ['./routes/index.js']
 
 // This will generate swagger.json
 swaggerAutogen(outputFile, endpointFiles, doc)
-
