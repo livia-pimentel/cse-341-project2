@@ -300,8 +300,8 @@
                 },
                 "rating": {
                   "type": "number",
-                  "format": "float",
                   "example": 8.8,
+                  "format": "float",
                   "description": "Rating of the movie"
                 },
                 "showtimes": {
