@@ -5,7 +5,7 @@
     "description": "API for managing employees and movies in a cinema.",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse-341-project2-ux8v.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
