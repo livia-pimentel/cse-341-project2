@@ -18,10 +18,10 @@ exports.moviesValidation = [
     check('title', 'Title is required.').not().isEmpty(),
     check('genre', 'Genre is required.').not().isEmpty(),
     check('duration', 'Duration is required.').not().isEmpty(),
-    check('rating', 'Rating is required.').isFloat(),
+    check('rating', 'Rating is required.').not().isEmpty(),
     check('showtimes.date', 'Date is required.').not().isEmpty(),
     check('showtimes.time', 'Time is required.').not().isEmpty(),
-    check('showtimes.room', 'Room is required.').isInt({min: 1}),
+    check('showtimes.room', 'Room is required.').not().isEmpty(),
 ]
 
 // // Signup validations

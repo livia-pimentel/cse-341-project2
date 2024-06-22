@@ -299,9 +299,8 @@
                   "description": "Duration of the movie"
                 },
                 "rating": {
-                  "type": "number",
-                  "format": "float",
-                  "example": 8.8,
+                  "type": "string",
+                  "example": "8.8",
                   "description": "Rating of the movie"
                 },
                 "showtimes": {
@@ -318,15 +317,15 @@
                       "description": "Time of the showtime"
                     },
                     "room": {
-                      "type": "integer",
-                      "example": 1,
+                      "type": "string",
+                      "example": "1",
                       "description": "Room number"
                     }
                   },
                   "example": {
                     "date": "2024-06-18",
                     "time": "09:00 p.m",
-                    "room": 1
+                    "room": "1"
                   },
                   "description": "Showtimes information"
                 }
@@ -407,9 +406,8 @@
                   "description": "Duration of the movie"
                 },
                 "rating": {
-                  "type": "number",
-                  "format": "float",
-                  "example": 8.8,
+                  "type": "string",
+                  "example": "8.8",
                   "description": "Rating of the movie"
                 },
                 "showtimes": {
@@ -426,15 +424,15 @@
                       "description": "Time of the showtime"
                     },
                     "room": {
-                      "type": "integer",
-                      "example": 1,
+                      "type": "string",
+                      "example": "1",
                       "description": "Room number"
                     }
                   },
                   "example": {
                     "date": "2024-06-18",
                     "time": "09:00 p.m",
-                    "room": 1
+                    "room": "1"
                   },
                   "description": "Showtimes information"
                 }
