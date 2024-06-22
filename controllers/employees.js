@@ -7,7 +7,7 @@ const getAll = async(req, res) => {
         const result = await mongodb.getDatabase().db().collection('employees').find()
         result.toArray().then((employees) => {
             res.setHeader('Content-Type', 'application/json')
-            res.status(204).json(employees)
+            res.status(200).json(employees)
         })
     } catch (error) {
         res.status(500).json({ message: 'Error fetching employees', error });
@@ -22,11 +22,11 @@ const getSingle = async(req, res) => {
         const result = await mongodb.getDatabase().db().collection('employees').findOne({_id: employeesId})
         // result.toArray().then((employees) => {
         //     res.setHeader('Content-Type', 'application/json')
-        //     res.status(204).json(employees[0])
+        //     res.status(200).json(employees[0])
         // })
         if (result) {
             res.setHeader('Content-Type', 'application/json');
-            res.status(204).json(result);
+            res.status(200).json(result);
         } else {
             console.log('Employee not found for ID:', employeesId)
             res.status(400).json({ message: 'Employee not found' });
@@ -54,7 +54,7 @@ const createEmployee = async (req, res) => {
         }
         const response = await mongodb.getDatabase().db().collection('employees').insertOne(employee)
         if (response.acknowledged) {
-            res.status(204).json({ message: 'Employee created successfully!', id: response.insertedId })
+            res.status(200).json({ message: 'Employee created successfully!', id: response.insertedId })
         }
     } catch (error){
         res.status(500).json({ message: 'Error creating employee', error });
@@ -80,7 +80,7 @@ const updateEmployee = async (req, res) => {
     }
     const response = await mongodb.getDatabase().db().collection('employees').replaceOne({_id: employeeId}, employee)
     if (response.modifiedCount > 0) {
-        res.status(204).json({ message: 'Employee updated successfully!' })
+        res.status(200).json({ message: 'Employee updated successfully!' })
     } else {
         res.status(400).json({ message: 'Employee not found or no changes made!' })
     }
@@ -96,7 +96,7 @@ const deleteEmployee = async(req, res) => {
         const employeeId = new ObjectId(req.params.id)
     const response = await mongodb.getDatabase().db().collection('employees').deleteOne({_id: employeeId})
     if (response.deletedCount > 0) {
-        res.status(204).json({ message: 'Employee deleted successfully!' })
+        res.status(200).json({ message: 'Employee deleted successfully!' })
     } else {
         res.status(400).json({ message: 'Employee not found' })
     }
