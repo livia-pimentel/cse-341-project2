@@ -1,13 +1,21 @@
-const router = require('express').Router()
+const router = require('express').Router();
+const passport = require('passport');
 
-router.use('/', require('./swagger'))
+router.use('/', require('./swagger'));
 
-router.get('/', (req, res) => {
-    //#swagger.tags=['Project 2 - CSE 341: Web Services']
-    res.send('Project 2 - CSE 341: Web Services')
-})
+router.use('/employees', require('./employees'));
+router.use('/movies', require('./movies'));
 
-router.use('/employees', require('./employees'))
-router.use('/movies', require('./movies'))
+router.get('/login', passport.authenticate('github'));
 
-module.exports = router
+router.get('/logout', function(req, res, next) {
+    req.logout(function(err) {
+        if(err) {
+            return next(err);
+        }
+        req.session.logoutMessage = 'Logout carried out successfully';
+        res.redirect('/');
+    });
+});
+
+module.exports = router;
