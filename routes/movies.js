@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const movieController = require('../controllers/movies.js')
-const { moviesValidation, validate } = require('../validation.js') 
+const { moviesValidation, validate } = require('../middleware/validation.js') 
 const { isAuthenticated } = require('../middleware/authenticate.js')
 
 // Get all movies
