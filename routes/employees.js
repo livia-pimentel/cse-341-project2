@@ -4,9 +4,6 @@ const { employeesValidation, validate } = require('../middleware/validation.js')
 const employeeController = require('../controllers/employees.js');
 const { isAuthenticated } = require('../middleware/authenticate.js');
 
-// // Protect all routes
-// router.use(isAuthenticated)
-
 // Get all employees
 router.get('/', employeeController.getAll);
 

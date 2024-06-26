@@ -71,6 +71,7 @@ app.get('/', (req, res) => {
         res.send(message);
     } else if (req.session.user) {
         const displayName = req.session.user.displayName || req.session.user.username;
+        // console.log('After login:', req.session)
         res.send(`Logged in as ${displayName}`);
     } else {
         res.send('Project 2 - CSE 341: Web Services');
@@ -78,7 +79,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/github/callback', passport.authenticate('github', {
-    failureRedirect: '/', session: false
+    failureRedirect: '/api-docs', session: false
 }), (req, res) => {
     req.session.user = req.user;
     // console.log('Authenticated user:', req.user);
