@@ -68,10 +68,10 @@ app.get('/', (req, res) => {
     delete req.session.logoutMessage;
 
     if (message) {
-        res.json({ message });
+        res.send(message);
     } else if (req.session.user) {
         const displayName = req.session.user.displayName || req.session.user.username;
-        res.json({ message: `Logged in as ${displayName}` });
+        res.send(`Logged in as ${displayName}`);
     } else {
         res.send('Project 2 - CSE 341: Web Services');
     }
