@@ -7,6 +7,7 @@ This project is an API designed to manage a cinema, including operations related
 
 ## Prerequisites
 **Node.js (v18.17.1 or later recommended)** 
+
 **npm (v9 or later recommended)** 
 
 ## Installation
@@ -49,5 +50,7 @@ You can test authentication using tools like Insomnia or Postman. Make sure to i
 ## Swagger Documentation
 You can access the API documentation using Swagger UI at:
 * http://localhost:3000/api-docs
+
 or
+
 * https://cse-341-project2-ux8v.onrender.com/api-docs/
