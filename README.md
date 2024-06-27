@@ -3,6 +3,7 @@ This project is an API designed to manage a cinema, including operations related
 
 ## Features
 **Employee Management**: Create, read, update, and delete employee records.
+
 **Movie Management**: Create, read, update, and delete movie records.
 
 ## Prerequisites
@@ -11,10 +12,10 @@ This project is an API designed to manage a cinema, including operations related
 **npm (v9 or later recommended)** 
 
 ## Installation
-**Install dependencies:**: npm install
+**Install dependencies:** npm install
 
 ## Running the Application
-**To run the application in development mode:**: npm run dev
+**To run the application in development mode:** npm run dev
 
 ## API Endpoints
 **Employees**
@@ -40,6 +41,7 @@ The API uses OAuth for authentication. Ensure you have your OAuth setup correctl
 * POST /movies/
 * PUT /movies/{id}
 * DELETE /movies/{id}
+
 **Testing Authentication**
 You can test authentication using tools like Insomnia or Postman. Make sure to include the appropriate OAuth tokens in your requests to access protected routes.
 
