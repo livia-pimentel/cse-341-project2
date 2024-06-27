@@ -39,3 +39,15 @@ The API uses OAuth for authentication. Ensure you have your OAuth setup correctl
 * POST /movies/
 * PUT /movies/{id}
 * DELETE /movies/{id}
+**Testing Authentication**
+You can test authentication using tools like Insomnia or Postman. Make sure to include the appropriate OAuth tokens in your requests to access protected routes.
+
+## Authentication Routes
+* POST /login: Authenticate and log in a user.
+* GET /logout: Logs out the user and destroys the session.
+
+## Swagger Documentation
+You can access the API documentation using Swagger UI at:
+* http://localhost:3000/api-docs
+or
+* https://cse-341-project2-ux8v.onrender.com/api-docs/
